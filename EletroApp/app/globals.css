@@ -1,0 +1,169 @@
+/* app/globals.css */
+@import "tailwindcss";
+
+:root {
+  --azul: #1565C0;
+  --azul-escuro: #0D47A1;
+  --azul-claro: #E3F2FD;
+  --verde: #1B5E20;
+  --vermelho: #B71C1C;
+  --cinza: #37474F;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f8fafc;
+  color: #1a1a1a;
+}
+
+/* Scrollbar discreta */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #f1f1f1; }
+::-webkit-scrollbar-thumb { background: #c1c1c1; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #a1a1a1; }
+
+/* Tabela padrão */
+.tabela-projeto {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+}
+.tabela-projeto thead tr {
+  background-color: var(--azul-escuro);
+  color: white;
+}
+.tabela-projeto thead th {
+  padding: 10px 12px;
+  text-align: left;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.tabela-projeto tbody tr:nth-child(even) {
+  background-color: var(--azul-claro);
+}
+.tabela-projeto tbody tr:hover {
+  background-color: #BBDEFB;
+}
+.tabela-projeto tbody td {
+  padding: 8px 12px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+/* Card padrão */
+.card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+  padding: 24px;
+  margin-bottom: 20px;
+}
+
+/* Badge status */
+.badge-ok      { color: #1B5E20; font-weight: 600; }
+.badge-revisar { color: #B71C1C; font-weight: 600; }
+
+/* Input padrão */
+.input-field {
+  width: 100%;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 0.9rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+.input-field:focus {
+  border-color: var(--azul);
+  box-shadow: 0 0 0 3px rgba(21,101,192,0.1);
+}
+
+/* Select padrão */
+.select-field {
+  width: 100%;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 0.9rem;
+  background: white;
+  outline: none;
+  cursor: pointer;
+}
+.select-field:focus {
+  border-color: var(--azul);
+  box-shadow: 0 0 0 3px rgba(21,101,192,0.1);
+}
+
+/* Botões */
+.btn-primary {
+  background-color: var(--azul);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  width: 100%;
+}
+.btn-primary:hover  { background-color: var(--azul-escuro); }
+.btn-primary:active { transform: scale(0.98); }
+
+.btn-secondary {
+  background-color: white;
+  color: var(--azul);
+  border: 1.5px solid var(--azul);
+  border-radius: 8px;
+  padding: 9px 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  width: 100%;
+}
+.btn-secondary:hover { background-color: var(--azul-claro); }
+
+.btn-danger {
+  background-color: white;
+  color: var(--vermelho);
+  border: 1.5px solid var(--vermelho);
+  border-radius: 8px;
+  padding: 7px 14px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.btn-danger:hover { background-color: #FFEBEE; }
+
+/* Label padrão */
+.label {
+  display: block;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--cinza);
+  margin-bottom: 4px;
+}
+
+/* Alerta */
+.alerta-warning {
+  background-color: #FFF8E1;
+  border: 1.5px solid #F9A825;
+  border-radius: 8px;
+  padding: 12px 16px;
+  font-size: 0.88rem;
+  color: #5D4037;
+  margin-bottom: 12px;
+}
+.alerta-info {
+  background-color: var(--azul-claro);
+  border: 1.5px solid var(--azul);
+  border-radius: 8px;
+  padding: 12px 16px;
+  font-size: 0.88rem;
+  color: var(--azul-escuro);
+  margin-bottom: 12px;
+}
