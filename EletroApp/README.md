@@ -1,36 +1,87 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ⚡ EletrApp Residencial
 
-## Getting Started
+**Projeto Elétrico Residencial automatizado** – Dimensionamento completo conforme NBR 5410:2005 e padrão Cemig ND-5.5.
 
-First, run the development server:
+![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
+![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white)
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+
+---
+
+## 🎯 O que o EletrApp faz
+
+1. **Cadastro de cômodos** com dimensões reais
+2. **Cálculo automático** de:
+   - Iluminação (método dos lúmens)
+   - Tomadas TUG (a cada 5m de perímetro)
+   - Tomadas TUE (equipamentos específicos)
+   - Demanda total (Cemig ND-5.5)
+   - Bitola de condutores (Tabelas 36, 38, 40 NBR 5410)
+   - Queda de tensão (máx. 4%)
+   - Disjuntores e DRs
+3. **Geração de documentos profissionais**:
+   - 📄 Memorial descritivo
+   - 📊 Memorial de cálculo
+   - 🖼️ Planta elétrica (símbolos NBR 5444)
+   - 📐 Diagrama unifilar
+   - 📦 Lista de materiais
+   - ✍️ Termo de responsabilidade/ART
+
+---
+
+## 🚀 Como executar
 
 ```bash
+# Instalar dependências
+npm install
+
+# Rodar em modo desenvolvimento
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+# Acessar no navegador
+http://localhost:3000
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+app/
+├── page.tsx          # Dados da obra
+├── comodos/          # Cadastro de cômodos
+├── calculos/         # Cálculos elétricos
+├── planta/           # Planta elétrica (canvas)
+├── unifilar/         # Diagrama unifilar
+└── documentos/       # Geração de PDF
+lib/
+├── calculations.ts   # Fórmulas NBR 5410
+├── constants.ts      # Tabelas (lúmens, TUGs, etc.)
+└── store.ts          # Estado global (Zustand)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+📚 Normas técnicas implementadas
+NBR 5410:2005 – Instalações elétricas de baixa tensão
 
-## Learn More
+NBR 5444:1989 – Símbolos gráficos para plantas elétricas
 
-To learn more about Next.js, take a look at the following resources:
+ND-5.5 Cemig – Fornecimento de energia em tensão secundária
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+NBR ISO/CIE 8995-1 – Níveis de iluminância para interiores
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+🛠️ Tecnologias utilizadas
+Next.js 16 (App Router)
 
-## Deploy on Vercel
+TypeScript
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+TailwindCSS
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+jsPDF + jsPDF-autotable
+
+Canvas API 2D (planta e unifilar)
+
+Zustand (estado global)
+
+👨‍💻 Autor
+Roberto Souza – GitHub
+
+Projeto desenvolvido com auxílio de IA (Claude), com revisões e adaptações manuais para atender às normas técnicas brasileiras.
+
+⚠️ Aviso importante
+Este projeto é uma ferramenta de auxílio ao dimensionamento e não substitui a análise crítica de um engenheiro eletricista habilitado. A emissão de ART é obrigatória conforme Lei 6.496/77.
+
+📄 Licença
+MIT – use à vontade, mas mantenha os créditos.
