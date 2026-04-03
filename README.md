@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="./public/favicon.ico" alt="EletrApp Logo" width="80"/>
+</p>
+
 # ⚡ EletrApp Residencial
 
 **Projeto Elétrico Residencial automatizado** – Dimensionamento completo conforme NBR 5410:2005 e padrão Cemig ND-5.5.
@@ -41,6 +45,8 @@ npm run dev
 # Acessar no navegador
 http://localhost:3000
 
+📂 Estrutura do projeto
+text
 app/
 ├── page.tsx          # Dados da obra
 ├── comodos/          # Cadastro de cômodos
@@ -52,7 +58,6 @@ lib/
 ├── calculations.ts   # Fórmulas NBR 5410
 ├── constants.ts      # Tabelas (lúmens, TUGs, etc.)
 └── store.ts          # Estado global (Zustand)
-
 📚 Normas técnicas implementadas
 NBR 5410:2005 – Instalações elétricas de baixa tensão
 
@@ -76,7 +81,7 @@ Canvas API 2D (planta e unifilar)
 Zustand (estado global)
 
 👨‍💻 Autor
-Roberto Souza – GitHub
+Roberto Sousa – GitHub
 
 Projeto desenvolvido com auxílio de IA (Claude), com revisões e adaptações manuais para atender às normas técnicas brasileiras.
 

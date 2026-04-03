@@ -1,4 +1,3 @@
-// app/layout.tsx
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
@@ -10,6 +9,9 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "EletrApp Residencial",
   description: "Projeto Elétrico Residencial — NBR 5410:2005 / Cemig ND-5.5",
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({
